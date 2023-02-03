@@ -1,0 +1,791 @@
+Analysis & Synthesis report for exam1
+Wed Feb 01 09:52:26 2023
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |exam1|next
+  8. State Machine - |exam1|acurrent_state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |exam1
+ 15. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod5
+ 16. Parameter Settings for Inferred Entity Instance: lpm_divide:Div4
+ 17. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4
+ 18. Parameter Settings for Inferred Entity Instance: lpm_divide:Div3
+ 19. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3
+ 20. Parameter Settings for Inferred Entity Instance: lpm_divide:Div2
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Feb 01 09:52:26 2023        ;
+; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name               ; exam1                                        ;
+; Top-level Entity Name       ; exam1                                        ;
+; Family                      ; MAX II                                       ;
+; Total logic elements        ; 656                                          ;
+; Total pins                  ; 36                                           ;
+; Total virtual pins          ; 0                                            ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
++-----------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EPM1270T144C5      ;                    ;
+; Top-level entity name                                        ; exam1              ; exam1              ;
+; Family name                                                  ; MAX II             ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
+; exam1.v                          ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/sdaf/exam1.v                                ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/quartus ii/quartus/libraries/megafunctions/lpm_divide.tdf      ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/quartus ii/quartus/libraries/megafunctions/abs_divider.inc     ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/quartus ii/quartus/libraries/megafunctions/sign_div_unsign.inc ;
+; aglobal90.inc                    ; yes             ; Megafunction                 ; d:/quartus ii/quartus/libraries/megafunctions/aglobal90.inc       ;
+; db/lpm_divide_tnl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/lpm_divide_tnl.tdf                  ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/sign_div_unsign_bkh.tdf             ;
+; db/alt_u_div_hie.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/alt_u_div_hie.tdf                   ;
+; db/add_sub_e7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_e7c.tdf                     ;
+; db/add_sub_f7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_f7c.tdf                     ;
+; db/add_sub_g7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_g7c.tdf                     ;
+; db/add_sub_h7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_h7c.tdf                     ;
+; db/add_sub_i7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_i7c.tdf                     ;
+; db/lpm_divide_qvl.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/lpm_divide_qvl.tdf                  ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 656   ;
+;     -- Combinational with no register       ; 476   ;
+;     -- Register only                        ; 78    ;
+;     -- Combinational with a register        ; 102   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 101   ;
+;     -- 3 input functions                    ; 108   ;
+;     -- 2 input functions                    ; 260   ;
+;     -- 1 input functions                    ; 107   ;
+;     -- 0 input functions                    ; 2     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 417   ;
+;     -- arithmetic mode                      ; 239   ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 58    ;
+;     -- asynchronous clear/load mode         ; 84    ;
+;                                             ;       ;
+; Total registers                             ; 180   ;
+; Total logic cells in carry chains           ; 302   ;
+; I/O pins                                    ; 36    ;
+; Maximum fan-out node                        ; rst   ;
+; Maximum fan-out                             ; 123   ;
+; Total fan-out                               ; 1864  ;
+; Average fan-out                             ; 2.69  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                       ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                          ; Library Name ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |exam1                                 ; 656 (338)   ; 180          ; 0          ; 36   ; 0            ; 476 (158)    ; 78 (78)           ; 102 (102)        ; 302 (134)       ; 0 (0)      ; |exam1                                                                                                                       ; work         ;
+;    |lpm_divide:Div2|                   ; 51 (0)      ; 0            ; 0          ; 0    ; 0            ; 51 (0)       ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div2                                                                                                       ; work         ;
+;       |lpm_divide_qvl:auto_generated|  ; 51 (0)      ; 0            ; 0          ; 0    ; 0            ; 51 (0)       ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div2|lpm_divide_qvl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_bkh:divider| ; 51 (0)      ; 0            ; 0          ; 0    ; 0            ; 51 (0)       ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div2|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider                                             ; work         ;
+;             |alt_u_div_hie:divider|    ; 51 (26)     ; 0            ; 0          ; 0    ; 0            ; 51 (26)      ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div2|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider                       ; work         ;
+;                |add_sub_h7c:add_sub_3| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |exam1|lpm_divide:Div2|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                |add_sub_i7c:add_sub_4| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Div2|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                |add_sub_i7c:add_sub_5| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |exam1|lpm_divide:Div2|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_5 ; work         ;
+;                |add_sub_i7c:add_sub_6| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |exam1|lpm_divide:Div2|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_6 ; work         ;
+;    |lpm_divide:Div3|                   ; 51 (0)      ; 0            ; 0          ; 0    ; 0            ; 51 (0)       ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div3                                                                                                       ; work         ;
+;       |lpm_divide_qvl:auto_generated|  ; 51 (0)      ; 0            ; 0          ; 0    ; 0            ; 51 (0)       ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div3|lpm_divide_qvl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_bkh:divider| ; 51 (0)      ; 0            ; 0          ; 0    ; 0            ; 51 (0)       ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div3|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider                                             ; work         ;
+;             |alt_u_div_hie:divider|    ; 51 (26)     ; 0            ; 0          ; 0    ; 0            ; 51 (26)      ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div3|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider                       ; work         ;
+;                |add_sub_h7c:add_sub_3| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |exam1|lpm_divide:Div3|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                |add_sub_i7c:add_sub_4| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Div3|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                |add_sub_i7c:add_sub_5| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |exam1|lpm_divide:Div3|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_5 ; work         ;
+;                |add_sub_i7c:add_sub_6| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |exam1|lpm_divide:Div3|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_6 ; work         ;
+;    |lpm_divide:Div4|                   ; 51 (0)      ; 0            ; 0          ; 0    ; 0            ; 51 (0)       ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div4                                                                                                       ; work         ;
+;       |lpm_divide_qvl:auto_generated|  ; 51 (0)      ; 0            ; 0          ; 0    ; 0            ; 51 (0)       ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div4|lpm_divide_qvl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_bkh:divider| ; 51 (0)      ; 0            ; 0          ; 0    ; 0            ; 51 (0)       ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div4|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider                                             ; work         ;
+;             |alt_u_div_hie:divider|    ; 51 (26)     ; 0            ; 0          ; 0    ; 0            ; 51 (26)      ; 0 (0)             ; 0 (0)            ; 25 (0)          ; 0 (0)      ; |exam1|lpm_divide:Div4|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider                       ; work         ;
+;                |add_sub_h7c:add_sub_3| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |exam1|lpm_divide:Div4|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                |add_sub_i7c:add_sub_4| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Div4|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                |add_sub_i7c:add_sub_5| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |exam1|lpm_divide:Div4|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_5 ; work         ;
+;                |add_sub_i7c:add_sub_6| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |exam1|lpm_divide:Div4|lpm_divide_qvl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_6 ; work         ;
+;    |lpm_divide:Mod3|                   ; 55 (0)      ; 0            ; 0          ; 0    ; 0            ; 55 (0)       ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod3                                                                                                       ; work         ;
+;       |lpm_divide_tnl:auto_generated|  ; 55 (0)      ; 0            ; 0          ; 0    ; 0            ; 55 (0)       ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod3|lpm_divide_tnl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_bkh:divider| ; 55 (0)      ; 0            ; 0          ; 0    ; 0            ; 55 (0)       ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod3|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider                                             ; work         ;
+;             |alt_u_div_hie:divider|    ; 55 (24)     ; 0            ; 0          ; 0    ; 0            ; 55 (24)      ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod3|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider                       ; work         ;
+;                |add_sub_h7c:add_sub_3| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod3|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                |add_sub_i7c:add_sub_4| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |exam1|lpm_divide:Mod3|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                |add_sub_i7c:add_sub_5| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod3|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_5 ; work         ;
+;                |add_sub_i7c:add_sub_6| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod3|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_6 ; work         ;
+;                |add_sub_i7c:add_sub_7| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod3|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_7 ; work         ;
+;    |lpm_divide:Mod4|                   ; 55 (0)      ; 0            ; 0          ; 0    ; 0            ; 55 (0)       ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod4                                                                                                       ; work         ;
+;       |lpm_divide_tnl:auto_generated|  ; 55 (0)      ; 0            ; 0          ; 0    ; 0            ; 55 (0)       ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod4|lpm_divide_tnl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_bkh:divider| ; 55 (0)      ; 0            ; 0          ; 0    ; 0            ; 55 (0)       ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod4|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider                                             ; work         ;
+;             |alt_u_div_hie:divider|    ; 55 (24)     ; 0            ; 0          ; 0    ; 0            ; 55 (24)      ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod4|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider                       ; work         ;
+;                |add_sub_h7c:add_sub_3| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod4|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                |add_sub_i7c:add_sub_4| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |exam1|lpm_divide:Mod4|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                |add_sub_i7c:add_sub_5| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod4|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_5 ; work         ;
+;                |add_sub_i7c:add_sub_6| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod4|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_6 ; work         ;
+;                |add_sub_i7c:add_sub_7| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod4|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_7 ; work         ;
+;    |lpm_divide:Mod5|                   ; 55 (0)      ; 0            ; 0          ; 0    ; 0            ; 55 (0)       ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod5                                                                                                       ; work         ;
+;       |lpm_divide_tnl:auto_generated|  ; 55 (0)      ; 0            ; 0          ; 0    ; 0            ; 55 (0)       ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod5|lpm_divide_tnl:auto_generated                                                                         ; work         ;
+;          |sign_div_unsign_bkh:divider| ; 55 (0)      ; 0            ; 0          ; 0    ; 0            ; 55 (0)       ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod5|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider                                             ; work         ;
+;             |alt_u_div_hie:divider|    ; 55 (24)     ; 0            ; 0          ; 0    ; 0            ; 55 (24)      ; 0 (0)             ; 0 (0)            ; 31 (0)          ; 0 (0)      ; |exam1|lpm_divide:Mod5|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider                       ; work         ;
+;                |add_sub_h7c:add_sub_3| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod5|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_h7c:add_sub_3 ; work         ;
+;                |add_sub_i7c:add_sub_4| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 7 (7)           ; 0 (0)      ; |exam1|lpm_divide:Mod5|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_4 ; work         ;
+;                |add_sub_i7c:add_sub_5| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod5|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_5 ; work         ;
+;                |add_sub_i7c:add_sub_6| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod5|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_6 ; work         ;
+;                |add_sub_i7c:add_sub_7| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam1|lpm_divide:Mod5|lpm_divide_tnl:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_hie:divider|add_sub_i7c:add_sub_7 ; work         ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |exam1|next                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-------------+-------------+-------------+-------------+-------------+-------------+
+; Name        ; next.data31 ; next.data30 ; next.data29 ; next.data28 ; next.data27 ; next.data26 ; next.data25 ; next.data24 ; next.data23 ; next.data22 ; next.data21 ; next.data20 ; next.data19 ; next.data18 ; next.data17 ; next.data16 ; next.data15 ; next.data14 ; next.data13 ; next.data12 ; next.data11 ; next.data10 ; next.data9 ; next.data8 ; next.data7 ; next.data6 ; next.data5 ; next.data4 ; next.data3 ; next.data2 ; next.data1 ; next.data0 ; next.scan ; next.state5 ; next.state4 ; next.state3 ; next.state2 ; next.state1 ; next.state0 ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-------------+-------------+-------------+-------------+-------------+-------------+
+; next.state0 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ;
+; next.state1 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 1           ; 1           ;
+; next.state2 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 1           ; 0           ; 1           ;
+; next.state3 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 1           ; 0           ; 0           ; 1           ;
+; next.state4 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 1           ; 0           ; 0           ; 0           ; 1           ;
+; next.state5 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 1           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.scan   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data0  ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data1  ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data2  ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data3  ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data4  ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data5  ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data6  ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data7  ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data8  ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data9  ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data10 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data11 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data12 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data13 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data14 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data15 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data16 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data17 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data18 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data19 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data20 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data21 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data22 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data23 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data24 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data25 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data26 ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data27 ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data28 ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data29 ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data30 ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
+; next.data31 ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0         ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
++-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-----------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |exam1|acurrent_state                                                             ;
++-------------------+-------------------+-------------------+-------------------+-------------------+
+; Name              ; acurrent_state.11 ; acurrent_state.10 ; acurrent_state.01 ; acurrent_state.00 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+
+; acurrent_state.00 ; 0                 ; 0                 ; 0                 ; 0                 ;
+; acurrent_state.01 ; 0                 ; 0                 ; 1                 ; 1                 ;
+; acurrent_state.10 ; 0                 ; 1                 ; 0                 ; 1                 ;
+; acurrent_state.11 ; 1                 ; 0                 ; 0                 ; 1                 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; cs_n$latch                                         ; rst                 ; yes                    ;
+; rd_n$latch                                         ; rst                 ; yes                    ;
+; wr_n$latch                                         ; rst                 ; yes                    ;
+; anext_state.01_2740                                ; rst                 ; yes                    ;
+; anext_state.11_2728                                ; rst                 ; yes                    ;
+; anext_state.10_2734                                ; rst                 ; yes                    ;
+; anext_state.00_2746                                ; rst                 ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; en_sel                                 ; Stuck at VCC due to stuck port data_in ;
+; two_8[6..7]                            ; Stuck at GND due to stuck port data_in ;
+; two_8[5]                               ; Stuck at VCC due to stuck port data_in ;
+; two_11[6..7]                           ; Stuck at GND due to stuck port data_in ;
+; two_11[5]                              ; Stuck at VCC due to stuck port data_in ;
+; two_14[6..7]                           ; Stuck at GND due to stuck port data_in ;
+; two_14[5]                              ; Stuck at VCC due to stuck port data_in ;
+; one_11[5]                              ; Stuck at VCC due to stuck port data_in ;
+; one_11[6..7]                           ; Stuck at GND due to stuck port data_in ;
+; one_13[5]                              ; Stuck at VCC due to stuck port data_in ;
+; one_13[6..7]                           ; Stuck at GND due to stuck port data_in ;
+; one_14[5]                              ; Stuck at VCC due to stuck port data_in ;
+; one_14[6..7]                           ; Stuck at GND due to stuck port data_in ;
+; two_14[4]                              ; Merged with two_11[4]                  ;
+; two_11[4]                              ; Merged with two_8[4]                   ;
+; one_11[4]                              ; Lost fanout                            ;
+; one_13[4]                              ; Lost fanout                            ;
+; one_14[4]                              ; Lost fanout                            ;
+; one_11[0]                              ; Lost fanout                            ;
+; one_13[0]                              ; Lost fanout                            ;
+; one_14[0]                              ; Lost fanout                            ;
+; one_11[1]                              ; Lost fanout                            ;
+; one_13[1]                              ; Lost fanout                            ;
+; one_14[1]                              ; Lost fanout                            ;
+; one_11[2]                              ; Lost fanout                            ;
+; one_13[2]                              ; Lost fanout                            ;
+; one_14[2]                              ; Lost fanout                            ;
+; one_11[3]                              ; Lost fanout                            ;
+; one_13[3]                              ; Lost fanout                            ;
+; one_14[3]                              ; Lost fanout                            ;
+; next.state4                            ; Lost fanout                            ;
+; next.data0                             ; Lost fanout                            ;
+; next.data1                             ; Lost fanout                            ;
+; next.data2                             ; Lost fanout                            ;
+; next.data3                             ; Lost fanout                            ;
+; next.data4                             ; Lost fanout                            ;
+; next.data5                             ; Lost fanout                            ;
+; next.data6                             ; Lost fanout                            ;
+; next.data7                             ; Lost fanout                            ;
+; next.data8                             ; Lost fanout                            ;
+; next.data9                             ; Lost fanout                            ;
+; next.data10                            ; Lost fanout                            ;
+; next.data11                            ; Lost fanout                            ;
+; next.data12                            ; Lost fanout                            ;
+; next.data13                            ; Lost fanout                            ;
+; next.data14                            ; Lost fanout                            ;
+; next.data15                            ; Lost fanout                            ;
+; next~5                                 ; Lost fanout                            ;
+; next~6                                 ; Lost fanout                            ;
+; next~7                                 ; Lost fanout                            ;
+; next~8                                 ; Lost fanout                            ;
+; next~9                                 ; Lost fanout                            ;
+; next~10                                ; Lost fanout                            ;
+; next~11                                ; Lost fanout                            ;
+; next~12                                ; Lost fanout                            ;
+; acurrent_state~19                      ; Lost fanout                            ;
+; acurrent_state~20                      ; Lost fanout                            ;
+; two_7[7]                               ; Stuck at GND due to stuck port data_in ;
+; two_10[7]                              ; Stuck at GND due to stuck port data_in ;
+; two_13[7]                              ; Stuck at GND due to stuck port data_in ;
+; two_13[6]                              ; Merged with two_13[5]                  ;
+; two_10[6]                              ; Merged with two_10[5]                  ;
+; two_7[6]                               ; Merged with two_7[5]                   ;
+; Total Number of Removed Registers = 69 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 180   ;
+; Number of registers using Synchronous Clear  ; 58    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 84    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 88    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; two_10[5]                              ; 2       ;
+; two_7[5]                               ; 2       ;
+; two_13[5]                              ; 2       ;
+; flag                                   ; 1       ;
+; Total number of inverted registers = 4 ;         ;
++----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |exam1|delay[7]            ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; Yes        ; |exam1|data[6]~reg0        ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |exam1|data[1]~reg0        ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; No         ; |exam1|Selector18          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |exam1 ;
++----------------+----------+-------------------------------------------+
+; Parameter Name ; Value    ; Type                                      ;
++----------------+----------+-------------------------------------------+
+; state0         ; 00000000 ; Unsigned Binary                           ;
+; state1         ; 00000001 ; Unsigned Binary                           ;
+; state2         ; 00000010 ; Unsigned Binary                           ;
+; state3         ; 00000011 ; Unsigned Binary                           ;
+; state4         ; 00000100 ; Unsigned Binary                           ;
+; state5         ; 00000101 ; Unsigned Binary                           ;
+; scan           ; 00000110 ; Unsigned Binary                           ;
+; nul            ; 00000111 ; Unsigned Binary                           ;
+; data0          ; 00010000 ; Unsigned Binary                           ;
+; data1          ; 00010001 ; Unsigned Binary                           ;
+; data2          ; 00010010 ; Unsigned Binary                           ;
+; data3          ; 00010011 ; Unsigned Binary                           ;
+; data4          ; 00010100 ; Unsigned Binary                           ;
+; data5          ; 00010101 ; Unsigned Binary                           ;
+; data6          ; 00010110 ; Unsigned Binary                           ;
+; data7          ; 00010111 ; Unsigned Binary                           ;
+; data8          ; 00011000 ; Unsigned Binary                           ;
+; data9          ; 00011001 ; Unsigned Binary                           ;
+; data10         ; 00100000 ; Unsigned Binary                           ;
+; data11         ; 00100001 ; Unsigned Binary                           ;
+; data12         ; 00100010 ; Unsigned Binary                           ;
+; data13         ; 00100011 ; Unsigned Binary                           ;
+; data14         ; 00100100 ; Unsigned Binary                           ;
+; data15         ; 00100101 ; Unsigned Binary                           ;
+; data16         ; 00100110 ; Unsigned Binary                           ;
+; data17         ; 00100111 ; Unsigned Binary                           ;
+; data18         ; 00101000 ; Unsigned Binary                           ;
+; data19         ; 00101001 ; Unsigned Binary                           ;
+; data20         ; 00110000 ; Unsigned Binary                           ;
+; data21         ; 00110001 ; Unsigned Binary                           ;
+; data22         ; 00110010 ; Unsigned Binary                           ;
+; data23         ; 00110011 ; Unsigned Binary                           ;
+; data24         ; 00110100 ; Unsigned Binary                           ;
+; data25         ; 00110101 ; Unsigned Binary                           ;
+; data26         ; 00110110 ; Unsigned Binary                           ;
+; data27         ; 00110111 ; Unsigned Binary                           ;
+; data28         ; 00111000 ; Unsigned Binary                           ;
+; data29         ; 00111001 ; Unsigned Binary                           ;
+; data30         ; 01000000 ; Unsigned Binary                           ;
+; data31         ; 01000001 ; Unsigned Binary                           ;
++----------------+----------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod5 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_tnl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div4 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_qvl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod4 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_tnl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div3 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_qvl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod3 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_tnl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div2 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_qvl ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Feb 01 09:52:25 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exam1 -c exam1
+Info: Found 1 design units, including 1 entities, in source file exam1.v
+    Info: Found entity 1: exam1
+Info: Elaborating entity "exam1" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at exam1.v(24): object "read_flag" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at exam1.v(94): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at exam1.v(107): truncated value with size 32 to match size of target (16)
+Warning (10235): Verilog HDL Always Construct warning at exam1.v(128): variable "idle" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam1.v(133): variable "start" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam1.v(134): variable "start" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam1.v(139): variable "start_wait" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam1.v(140): variable "start_wait" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam1.v(145): variable "convert" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam1.v(146): variable "start_wait" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam1.v(148): variable "convert" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam1.v(153): variable "idle" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam1.v(154): variable "idle" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at exam1.v(118): inferring latch(es) for variable "idle", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam1.v(118): inferring latch(es) for variable "start", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam1.v(118): inferring latch(es) for variable "start_wait", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam1.v(118): inferring latch(es) for variable "convert", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam1.v(118): inferring latch(es) for variable "cs_n", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam1.v(118): inferring latch(es) for variable "wr_n", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam1.v(118): inferring latch(es) for variable "rd_n", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam1.v(118): inferring latch(es) for variable "anext_state", which holds its previous value in one or more paths through the always construct
+Warning (10230): Verilog HDL assignment warning at exam1.v(226): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam1.v(227): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam1.v(228): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam1.v(229): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam1.v(230): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam1.v(231): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam1.v(240): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam1.v(244): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam1.v(248): truncated value with size 32 to match size of target (8)
+Info (10041): Inferred latch for "anext_state.11" at exam1.v(118)
+Info (10041): Inferred latch for "anext_state.10" at exam1.v(118)
+Info (10041): Inferred latch for "anext_state.01" at exam1.v(118)
+Info (10041): Inferred latch for "anext_state.00" at exam1.v(118)
+Info (10041): Inferred latch for "rd_n" at exam1.v(118)
+Info (10041): Inferred latch for "wr_n" at exam1.v(118)
+Info (10041): Inferred latch for "cs_n" at exam1.v(118)
+Info (10041): Inferred latch for "convert.11" at exam1.v(118)
+Info (10041): Inferred latch for "convert.10" at exam1.v(118)
+Info (10041): Inferred latch for "convert.01" at exam1.v(118)
+Info (10041): Inferred latch for "convert.00" at exam1.v(118)
+Info (10041): Inferred latch for "start_wait.11" at exam1.v(118)
+Info (10041): Inferred latch for "start_wait.10" at exam1.v(118)
+Info (10041): Inferred latch for "start_wait.01" at exam1.v(118)
+Info (10041): Inferred latch for "start_wait.00" at exam1.v(118)
+Info (10041): Inferred latch for "start.11" at exam1.v(118)
+Info (10041): Inferred latch for "start.10" at exam1.v(118)
+Info (10041): Inferred latch for "start.01" at exam1.v(118)
+Info (10041): Inferred latch for "start.00" at exam1.v(118)
+Info (10041): Inferred latch for "idle.11" at exam1.v(118)
+Info (10041): Inferred latch for "idle.10" at exam1.v(118)
+Info (10041): Inferred latch for "idle.01" at exam1.v(118)
+Info (10041): Inferred latch for "idle.00" at exam1.v(118)
+Info: Inferred 6 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod5"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div4"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod4"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div3"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod3"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2"
+Info: Elaborated megafunction instantiation "lpm_divide:Mod5"
+Info: Instantiated megafunction "lpm_divide:Mod5" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "8"
+    Info: Parameter "LPM_WIDTHD" = "4"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_tnl.tdf
+    Info: Found entity 1: lpm_divide_tnl
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info: Found entity 1: sign_div_unsign_bkh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_hie.tdf
+    Info: Found entity 1: alt_u_div_hie
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_e7c.tdf
+    Info: Found entity 1: add_sub_e7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_f7c.tdf
+    Info: Found entity 1: add_sub_f7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_g7c.tdf
+    Info: Found entity 1: add_sub_g7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_h7c.tdf
+    Info: Found entity 1: add_sub_h7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_i7c.tdf
+    Info: Found entity 1: add_sub_i7c
+Info: Elaborated megafunction instantiation "lpm_divide:Div4"
+Info: Instantiated megafunction "lpm_divide:Div4" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "8"
+    Info: Parameter "LPM_WIDTHD" = "4"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_qvl.tdf
+    Info: Found entity 1: lpm_divide_qvl
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "rw" is stuck at GND
+    Warning (13410): Pin "key" is stuck at GND
+Info: 42 registers lost all their fanouts during netlist optimizations. The first 42 are displayed below.
+    Info: Register "one_11[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_13[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_14[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_11[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_13[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_14[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_11[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_13[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_14[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_11[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_13[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_14[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_11[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_13[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "one_14[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "next.state4" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data0" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data1" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data2" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data3" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data4" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data5" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data6" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data7" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data8" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data9" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data10" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data11" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data12" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data13" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data14" lost all its fanouts during netlist optimizations.
+    Info: Register "next.data15" lost all its fanouts during netlist optimizations.
+    Info: Register "next~5" lost all its fanouts during netlist optimizations.
+    Info: Register "next~6" lost all its fanouts during netlist optimizations.
+    Info: Register "next~7" lost all its fanouts during netlist optimizations.
+    Info: Register "next~8" lost all its fanouts during netlist optimizations.
+    Info: Register "next~9" lost all its fanouts during netlist optimizations.
+    Info: Register "next~10" lost all its fanouts during netlist optimizations.
+    Info: Register "next~11" lost all its fanouts during netlist optimizations.
+    Info: Register "next~12" lost all its fanouts during netlist optimizations.
+    Info: Register "acurrent_state~19" lost all its fanouts during netlist optimizations.
+    Info: Register "acurrent_state~20" lost all its fanouts during netlist optimizations.
+Info: Implemented 692 device resources after synthesis - the final resource count might be different
+    Info: Implemented 13 input pins
+    Info: Implemented 23 output pins
+    Info: Implemented 656 logic cells
+Info: Generated suppressed messages file C:/Users/User/Desktop/sdaf/exam1.map.smsg
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 230 megabytes
+    Info: Processing ended: Wed Feb 01 09:52:26 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/User/Desktop/sdaf/exam1.map.smsg.
+
+

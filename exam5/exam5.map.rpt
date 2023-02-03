@@ -1,0 +1,488 @@
+Analysis & Synthesis report for exam5
+Wed Feb 01 10:00:40 2023
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |exam5|acurrent_state
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Feb 01 10:00:40 2023        ;
+; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name               ; exam5                                        ;
+; Top-level Entity Name       ; exam5                                        ;
+; Family                      ; MAX II                                       ;
+; Total logic elements        ; 163                                          ;
+; Total pins                  ; 33                                           ;
+; Total virtual pins          ; 0                                            ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                                ;
++-----------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EPM1270T144C5      ;                    ;
+; Top-level entity name                                        ; exam5              ; exam5              ;
+; Family name                                                  ; MAX II             ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
+; exam5.v                          ; yes             ; User Verilog HDL File        ; C:/Users/User/Desktop/sdaf/exam5.v                                ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/quartus ii/quartus/libraries/megafunctions/lpm_divide.tdf      ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/quartus ii/quartus/libraries/megafunctions/abs_divider.inc     ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/quartus ii/quartus/libraries/megafunctions/sign_div_unsign.inc ;
+; aglobal90.inc                    ; yes             ; Megafunction                 ; d:/quartus ii/quartus/libraries/megafunctions/aglobal90.inc       ;
+; db/lpm_divide_veo.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/lpm_divide_veo.tdf                  ;
+; db/abs_divider_jbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/abs_divider_jbg.tdf                 ;
+; db/alt_u_div_ble.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/alt_u_div_ble.tdf                   ;
+; db/add_sub_e7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_e7c.tdf                     ;
+; db/add_sub_f7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_f7c.tdf                     ;
+; db/add_sub_g7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_g7c.tdf                     ;
+; db/add_sub_h7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_h7c.tdf                     ;
+; db/add_sub_i7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_i7c.tdf                     ;
+; db/add_sub_j7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_j7c.tdf                     ;
+; db/add_sub_k7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_k7c.tdf                     ;
+; db/add_sub_l7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_l7c.tdf                     ;
+; db/add_sub_m7c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_m7c.tdf                     ;
+; db/lpm_abs_cd9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/lpm_abs_cd9.tdf                     ;
+; db/lpm_abs_le9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/lpm_abs_le9.tdf                     ;
+; db/add_sub_l0f.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_l0f.tdf                     ;
+; db/add_sub_cve.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_cve.tdf                     ;
+; db/lpm_divide_v6o.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/lpm_divide_v6o.tdf                  ;
+; db/abs_divider_gbg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/abs_divider_gbg.tdf                 ;
+; db/alt_u_div_5le.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/alt_u_div_5le.tdf                   ;
+; db/lpm_abs_9d9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/lpm_abs_9d9.tdf                     ;
+; db/add_sub_9ve.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/User/Desktop/sdaf/db/add_sub_9ve.tdf                     ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 163   ;
+;     -- Combinational with no register       ; 73    ;
+;     -- Register only                        ; 40    ;
+;     -- Combinational with a register        ; 50    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 20    ;
+;     -- 3 input functions                    ; 28    ;
+;     -- 2 input functions                    ; 69    ;
+;     -- 1 input functions                    ; 6     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 97    ;
+;     -- arithmetic mode                      ; 66    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 32    ;
+;     -- asynchronous clear/load mode         ; 25    ;
+;                                             ;       ;
+; Total registers                             ; 90    ;
+; Total logic cells in carry chains           ; 70    ;
+; I/O pins                                    ; 33    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 65    ;
+; Total fan-out                               ; 539   ;
+; Average fan-out                             ; 2.75  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                   ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                      ; Library Name ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
+; |exam5                                 ; 163 (157)   ; 90           ; 0          ; 33   ; 0            ; 73 (67)      ; 40 (40)           ; 50 (50)          ; 70 (64)         ; 0 (0)      ; |exam5                                                                                                                   ; work         ;
+;    |lpm_divide:Div0|                   ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 6 (0)           ; 0 (0)      ; |exam5|lpm_divide:Div0                                                                                                   ; work         ;
+;       |lpm_divide_veo:auto_generated|  ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 6 (0)           ; 0 (0)      ; |exam5|lpm_divide:Div0|lpm_divide_veo:auto_generated                                                                     ; work         ;
+;          |abs_divider_jbg:divider|     ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 6 (0)           ; 0 (0)      ; |exam5|lpm_divide:Div0|lpm_divide_veo:auto_generated|abs_divider_jbg:divider                                             ; work         ;
+;             |alt_u_div_ble:divider|    ; 6 (0)       ; 0            ; 0          ; 0    ; 0            ; 6 (0)        ; 0 (0)             ; 0 (0)            ; 6 (0)           ; 0 (0)      ; |exam5|lpm_divide:Div0|lpm_divide_veo:auto_generated|abs_divider_jbg:divider|alt_u_div_ble:divider                       ; work         ;
+;                |add_sub_l7c:add_sub_7| ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 6 (6)           ; 0 (0)      ; |exam5|lpm_divide:Div0|lpm_divide_veo:auto_generated|abs_divider_jbg:divider|alt_u_div_ble:divider|add_sub_l7c:add_sub_7 ; work         ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |exam5|acurrent_state                                                             ;
++-------------------+-------------------+-------------------+-------------------+-------------------+
+; Name              ; acurrent_state.11 ; acurrent_state.10 ; acurrent_state.01 ; acurrent_state.00 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+
+; acurrent_state.00 ; 0                 ; 0                 ; 0                 ; 0                 ;
+; acurrent_state.01 ; 0                 ; 0                 ; 1                 ; 1                 ;
+; acurrent_state.10 ; 0                 ; 1                 ; 0                 ; 1                 ;
+; acurrent_state.11 ; 1                 ; 0                 ; 0                 ; 1                 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; cs_n$latch                                         ; rst                 ; yes                    ;
+; rd_n$latch                                         ; rst                 ; yes                    ;
+; wr_n$latch                                         ; rst                 ; yes                    ;
+; anext_state.01_1464                                ; rst                 ; yes                    ;
+; anext_state.11_1452                                ; rst                 ; yes                    ;
+; anext_state.10_1458                                ; rst                 ; yes                    ;
+; anext_state.00_1470                                ; rst                 ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; acurrent_state~19                     ; Lost fanout        ;
+; acurrent_state~20                     ; Lost fanout        ;
+; data_reg[0..2]                        ; Lost fanout        ;
+; Total Number of Removed Registers = 5 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 90    ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 25    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 25    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 5:1                ; 16 bits   ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |exam5|delay[9]            ;
+; 265:1              ; 8 bits    ; 1408 LEs      ; 72 LEs               ; 1336 LEs               ; Yes        ; |exam5|dataout[0]~reg0     ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; No         ; |exam5|Selector17          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 8              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_veo ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                ;
+; LPM_WIDTHD             ; 5              ; Untyped                ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_v6o ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Feb 01 10:00:39 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exam5 -c exam5
+Info: Found 1 design units, including 1 entities, in source file exam5.v
+    Info: Found entity 1: exam5
+Info: Elaborating entity "exam5" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at exam5.v(7): object "en_sel" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at exam5.v(13): object "two_7" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at exam5.v(13): object "two_8" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at exam5.v(13): object "two_10" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at exam5.v(13): object "two_11" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at exam5.v(13): object "two_13" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at exam5.v(13): object "two_14" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at exam5.v(19): object "read_flag" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at exam5.v(39): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at exam5.v(50): truncated value with size 32 to match size of target (16)
+Warning (10235): Verilog HDL Always Construct warning at exam5.v(71): variable "idle" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam5.v(76): variable "start" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam5.v(77): variable "start" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam5.v(82): variable "start_wait" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam5.v(83): variable "start_wait" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam5.v(88): variable "convert" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam5.v(89): variable "start_wait" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam5.v(91): variable "convert" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam5.v(96): variable "idle" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at exam5.v(97): variable "idle" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10240): Verilog HDL Always Construct warning at exam5.v(61): inferring latch(es) for variable "idle", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam5.v(61): inferring latch(es) for variable "start", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam5.v(61): inferring latch(es) for variable "start_wait", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam5.v(61): inferring latch(es) for variable "convert", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam5.v(61): inferring latch(es) for variable "cs_n", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam5.v(61): inferring latch(es) for variable "wr_n", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam5.v(61): inferring latch(es) for variable "rd_n", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at exam5.v(61): inferring latch(es) for variable "anext_state", which holds its previous value in one or more paths through the always construct
+Warning (10230): Verilog HDL assignment warning at exam5.v(104): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at exam5.v(168): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam5.v(169): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam5.v(170): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam5.v(171): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam5.v(172): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam5.v(173): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam5.v(179): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam5.v(183): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at exam5.v(187): truncated value with size 32 to match size of target (8)
+Warning (10034): Output port "rs" at exam5.v(5) has no driver
+Warning (10034): Output port "en" at exam5.v(5) has no driver
+Warning (10034): Output port "rw" at exam5.v(5) has no driver
+Info (10041): Inferred latch for "anext_state.11" at exam5.v(61)
+Info (10041): Inferred latch for "anext_state.10" at exam5.v(61)
+Info (10041): Inferred latch for "anext_state.01" at exam5.v(61)
+Info (10041): Inferred latch for "anext_state.00" at exam5.v(61)
+Info (10041): Inferred latch for "rd_n" at exam5.v(61)
+Info (10041): Inferred latch for "wr_n" at exam5.v(61)
+Info (10041): Inferred latch for "cs_n" at exam5.v(61)
+Info (10041): Inferred latch for "convert.11" at exam5.v(61)
+Info (10041): Inferred latch for "convert.10" at exam5.v(61)
+Info (10041): Inferred latch for "convert.01" at exam5.v(61)
+Info (10041): Inferred latch for "convert.00" at exam5.v(61)
+Info (10041): Inferred latch for "start_wait.11" at exam5.v(61)
+Info (10041): Inferred latch for "start_wait.10" at exam5.v(61)
+Info (10041): Inferred latch for "start_wait.01" at exam5.v(61)
+Info (10041): Inferred latch for "start_wait.00" at exam5.v(61)
+Info (10041): Inferred latch for "start.11" at exam5.v(61)
+Info (10041): Inferred latch for "start.10" at exam5.v(61)
+Info (10041): Inferred latch for "start.01" at exam5.v(61)
+Info (10041): Inferred latch for "start.00" at exam5.v(61)
+Info (10041): Inferred latch for "idle.11" at exam5.v(61)
+Info (10041): Inferred latch for "idle.10" at exam5.v(61)
+Info (10041): Inferred latch for "idle.01" at exam5.v(61)
+Info (10041): Inferred latch for "idle.00" at exam5.v(61)
+Info: Inferred 2 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
+Info: Elaborated megafunction instantiation "lpm_divide:Div0"
+Info: Instantiated megafunction "lpm_divide:Div0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "10"
+    Info: Parameter "LPM_WIDTHD" = "8"
+    Info: Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info: Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_veo.tdf
+    Info: Found entity 1: lpm_divide_veo
+Info: Found 1 design units, including 1 entities, in source file db/abs_divider_jbg.tdf
+    Info: Found entity 1: abs_divider_jbg
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_ble.tdf
+    Info: Found entity 1: alt_u_div_ble
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_e7c.tdf
+    Info: Found entity 1: add_sub_e7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_f7c.tdf
+    Info: Found entity 1: add_sub_f7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_g7c.tdf
+    Info: Found entity 1: add_sub_g7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_h7c.tdf
+    Info: Found entity 1: add_sub_h7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_i7c.tdf
+    Info: Found entity 1: add_sub_i7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_j7c.tdf
+    Info: Found entity 1: add_sub_j7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_k7c.tdf
+    Info: Found entity 1: add_sub_k7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_l7c.tdf
+    Info: Found entity 1: add_sub_l7c
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_m7c.tdf
+    Info: Found entity 1: add_sub_m7c
+Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_cd9.tdf
+    Info: Found entity 1: lpm_abs_cd9
+Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_le9.tdf
+    Info: Found entity 1: lpm_abs_le9
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_l0f.tdf
+    Info: Found entity 1: add_sub_l0f
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_cve.tdf
+    Info: Found entity 1: add_sub_cve
+Info: Elaborated megafunction instantiation "lpm_divide:Mod0"
+Info: Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "10"
+    Info: Parameter "LPM_WIDTHD" = "5"
+    Info: Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info: Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_v6o.tdf
+    Info: Found entity 1: lpm_divide_v6o
+Info: Found 1 design units, including 1 entities, in source file db/abs_divider_gbg.tdf
+    Info: Found entity 1: abs_divider_gbg
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_5le.tdf
+    Info: Found entity 1: alt_u_div_5le
+Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_9d9.tdf
+    Info: Found entity 1: lpm_abs_9d9
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_9ve.tdf
+    Info: Found entity 1: add_sub_9ve
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "rw" is stuck at GND
+    Warning (13410): Pin "rs" is stuck at GND
+    Warning (13410): Pin "en" is stuck at GND
+Info: 5 registers lost all their fanouts during netlist optimizations. The first 5 are displayed below.
+    Info: Register "acurrent_state~19" lost all its fanouts during netlist optimizations.
+    Info: Register "acurrent_state~20" lost all its fanouts during netlist optimizations.
+    Info: Register "data_reg[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "data_reg[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "data_reg[2]" lost all its fanouts during netlist optimizations.
+Warning: Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "adata[2]"
+    Warning (15610): No output dependent on input pin "adata[1]"
+    Warning (15610): No output dependent on input pin "adata[0]"
+Info: Implemented 196 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 22 output pins
+    Info: Implemented 163 logic cells
+Info: Generated suppressed messages file C:/Users/User/Desktop/sdaf/exam5.map.smsg
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 49 warnings
+    Info: Peak virtual memory: 229 megabytes
+    Info: Processing ended: Wed Feb 01 10:00:40 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/User/Desktop/sdaf/exam5.map.smsg.
+
+

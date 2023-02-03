@@ -1,0 +1,7 @@
+
+State Machine - |exam5|acurrent_state
+Name acurrent_state.11 acurrent_state.10 acurrent_state.01 acurrent_state.00 
+acurrent_state.00 0 0 0 0 
+acurrent_state.01 0 0 1 1 
+acurrent_state.10 0 1 0 1 
+acurrent_state.11 1 0 0 1 

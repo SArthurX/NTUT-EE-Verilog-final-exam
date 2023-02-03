@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="exam1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|exam1|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_qvl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|exam1|lpm_divide:Div4" CBX_FILE_NAME="lpm_divide_qvl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|exam1|lpm_divide:Mod3" CBX_FILE_NAME="lpm_divide_tnl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|exam1|lpm_divide:Mod5" CBX_FILE_NAME="lpm_divide_tnl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|exam1|lpm_divide:Div3" CBX_FILE_NAME="lpm_divide_qvl.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|exam1|lpm_divide:Mod4" CBX_FILE_NAME="lpm_divide_tnl.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

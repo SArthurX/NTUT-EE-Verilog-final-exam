@@ -1,0 +1,1027 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+42
+3099
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+exam1
+# storage
+db|exam1.(0).cnf
+db|exam1.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+exam1.v
+67ab6cfa53e4c11246965086542572c1
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+state0
+00000000
+PARAMETER_UNSIGNED_BIN
+DEF
+state1
+00000001
+PARAMETER_UNSIGNED_BIN
+DEF
+state2
+00000010
+PARAMETER_UNSIGNED_BIN
+DEF
+state3
+00000011
+PARAMETER_UNSIGNED_BIN
+DEF
+state4
+00000100
+PARAMETER_UNSIGNED_BIN
+DEF
+state5
+00000101
+PARAMETER_UNSIGNED_BIN
+DEF
+scan
+00000110
+PARAMETER_UNSIGNED_BIN
+DEF
+nul
+00000111
+PARAMETER_UNSIGNED_BIN
+DEF
+data0
+00010000
+PARAMETER_UNSIGNED_BIN
+DEF
+data1
+00010001
+PARAMETER_UNSIGNED_BIN
+DEF
+data2
+00010010
+PARAMETER_UNSIGNED_BIN
+DEF
+data3
+00010011
+PARAMETER_UNSIGNED_BIN
+DEF
+data4
+00010100
+PARAMETER_UNSIGNED_BIN
+DEF
+data5
+00010101
+PARAMETER_UNSIGNED_BIN
+DEF
+data6
+00010110
+PARAMETER_UNSIGNED_BIN
+DEF
+data7
+00010111
+PARAMETER_UNSIGNED_BIN
+DEF
+data8
+00011000
+PARAMETER_UNSIGNED_BIN
+DEF
+data9
+00011001
+PARAMETER_UNSIGNED_BIN
+DEF
+data10
+00100000
+PARAMETER_UNSIGNED_BIN
+DEF
+data11
+00100001
+PARAMETER_UNSIGNED_BIN
+DEF
+data12
+00100010
+PARAMETER_UNSIGNED_BIN
+DEF
+data13
+00100011
+PARAMETER_UNSIGNED_BIN
+DEF
+data14
+00100100
+PARAMETER_UNSIGNED_BIN
+DEF
+data15
+00100101
+PARAMETER_UNSIGNED_BIN
+DEF
+data16
+00100110
+PARAMETER_UNSIGNED_BIN
+DEF
+data17
+00100111
+PARAMETER_UNSIGNED_BIN
+DEF
+data18
+00101000
+PARAMETER_UNSIGNED_BIN
+DEF
+data19
+00101001
+PARAMETER_UNSIGNED_BIN
+DEF
+data20
+00110000
+PARAMETER_UNSIGNED_BIN
+DEF
+data21
+00110001
+PARAMETER_UNSIGNED_BIN
+DEF
+data22
+00110010
+PARAMETER_UNSIGNED_BIN
+DEF
+data23
+00110011
+PARAMETER_UNSIGNED_BIN
+DEF
+data24
+00110100
+PARAMETER_UNSIGNED_BIN
+DEF
+data25
+00110101
+PARAMETER_UNSIGNED_BIN
+DEF
+data26
+00110110
+PARAMETER_UNSIGNED_BIN
+DEF
+data27
+00110111
+PARAMETER_UNSIGNED_BIN
+DEF
+data28
+00111000
+PARAMETER_UNSIGNED_BIN
+DEF
+data29
+00111001
+PARAMETER_UNSIGNED_BIN
+DEF
+data30
+01000000
+PARAMETER_UNSIGNED_BIN
+DEF
+data31
+01000001
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide
+# storage
+db|exam1.(1).cnf
+db|exam1.(1).cnf
+# case_insensitive
+# source_file
+d:|quartus ii|quartus|libraries|megafunctions|lpm_divide.tdf
+e4fcec742d96d6ff3648b15f4aba5a
+7
+# user_parameter {
+LPM_WIDTHN
+8
+PARAMETER_UNKNOWN
+USR
+LPM_WIDTHD
+4
+PARAMETER_UNKNOWN
+USR
+LPM_NREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_DREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_REMAINDERPOSITIVE
+TRUE
+PARAMETER_UNKNOWN
+DEF
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+lpm_divide_tnl
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+OPTIMIZE_FOR_SPEED
+5
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+remain3
+-1
+3
+remain2
+-1
+3
+remain1
+-1
+3
+remain0
+-1
+3
+numer7
+-1
+3
+numer6
+-1
+3
+numer5
+-1
+3
+numer4
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom2
+-1
+1
+denom0
+-1
+1
+denom3
+-1
+2
+denom1
+-1
+2
+}
+# include_file {
+d:|quartus ii|quartus|libraries|megafunctions|abs_divider.inc
+cdfefd53e136b3a8e541899b82db37d
+d:|quartus ii|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+d:|quartus ii|quartus|libraries|megafunctions|sign_div_unsign.inc
+c1e17922387cb5d0c88d7fb673544bb4
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide_tnl
+# storage
+db|exam1.(2).cnf
+db|exam1.(2).cnf
+# case_insensitive
+# source_file
+db|lpm_divide_tnl.tdf
+755eab277d75b33af7ffc1a215721961
+7
+# used_port {
+remain3
+-1
+3
+remain2
+-1
+3
+remain1
+-1
+3
+remain0
+-1
+3
+numer7
+-1
+3
+numer6
+-1
+3
+numer5
+-1
+3
+numer4
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom3
+-1
+3
+denom2
+-1
+3
+denom1
+-1
+3
+denom0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+sign_div_unsign_bkh
+# storage
+db|exam1.(3).cnf
+db|exam1.(3).cnf
+# case_insensitive
+# source_file
+db|sign_div_unsign_bkh.tdf
+a06152e8c4f12a9dae7d4227855650
+7
+# used_port {
+remainder3
+-1
+3
+remainder2
+-1
+3
+remainder1
+-1
+3
+remainder0
+-1
+3
+quotient7
+-1
+3
+quotient6
+-1
+3
+quotient5
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numerator7
+-1
+3
+numerator6
+-1
+3
+numerator5
+-1
+3
+numerator4
+-1
+3
+numerator3
+-1
+3
+numerator2
+-1
+3
+numerator1
+-1
+3
+numerator0
+-1
+3
+denominator3
+-1
+3
+denominator2
+-1
+3
+denominator1
+-1
+3
+denominator0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+alt_u_div_hie
+# storage
+db|exam1.(4).cnf
+db|exam1.(4).cnf
+# case_insensitive
+# source_file
+db|alt_u_div_hie.tdf
+2d99ba2d4186497136aed12e5af9fbf7
+7
+# used_port {
+remainder3
+-1
+3
+remainder2
+-1
+3
+remainder1
+-1
+3
+remainder0
+-1
+3
+quotient7
+-1
+3
+quotient6
+-1
+3
+quotient5
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numerator7
+-1
+3
+numerator6
+-1
+3
+numerator5
+-1
+3
+numerator4
+-1
+3
+numerator3
+-1
+3
+numerator2
+-1
+3
+numerator1
+-1
+3
+numerator0
+-1
+3
+denominator3
+-1
+3
+denominator2
+-1
+3
+denominator1
+-1
+3
+denominator0
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_e7c
+# storage
+db|exam1.(5).cnf
+db|exam1.(5).cnf
+# case_insensitive
+# source_file
+db|add_sub_e7c.tdf
+1e295e85cfbe4ad28e9a363e46e2585f
+7
+# used_port {
+result0
+-1
+3
+datab0
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_f7c
+# storage
+db|exam1.(6).cnf
+db|exam1.(6).cnf
+# case_insensitive
+# source_file
+db|add_sub_f7c.tdf
+a662bfda732ea1a74d7e2be2c5026
+7
+# used_port {
+result1
+-1
+3
+result0
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_g7c
+# storage
+db|exam1.(7).cnf
+db|exam1.(7).cnf
+# case_insensitive
+# source_file
+db|add_sub_g7c.tdf
+273dc6e748df591e61ca92264e620d8
+7
+# used_port {
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_h7c
+# storage
+db|exam1.(8).cnf
+db|exam1.(8).cnf
+# case_insensitive
+# source_file
+db|add_sub_h7c.tdf
+7239a3494281e820b7b192acc14d6f
+7
+# used_port {
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+add_sub_i7c
+# storage
+db|exam1.(9).cnf
+db|exam1.(9).cnf
+# case_insensitive
+# source_file
+db|add_sub_i7c.tdf
+a320141dd9561af684ff5b7ecb12a39c
+7
+# used_port {
+result4
+-1
+3
+result3
+-1
+3
+result2
+-1
+3
+result1
+-1
+3
+result0
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+cout
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide
+# storage
+db|exam1.(10).cnf
+db|exam1.(10).cnf
+# case_insensitive
+# source_file
+d:|quartus ii|quartus|libraries|megafunctions|lpm_divide.tdf
+e4fcec742d96d6ff3648b15f4aba5a
+7
+# user_parameter {
+LPM_WIDTHN
+8
+PARAMETER_UNKNOWN
+USR
+LPM_WIDTHD
+4
+PARAMETER_UNKNOWN
+USR
+LPM_NREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_DREPRESENTATION
+UNSIGNED
+PARAMETER_UNKNOWN
+USR
+LPM_PIPELINE
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_REMAINDERPOSITIVE
+TRUE
+PARAMETER_UNKNOWN
+DEF
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+lpm_divide_qvl
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+OPTIMIZE_FOR_SPEED
+5
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+quotient7
+-1
+3
+quotient6
+-1
+3
+quotient5
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numer7
+-1
+3
+numer6
+-1
+3
+numer5
+-1
+3
+numer4
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom2
+-1
+1
+denom0
+-1
+1
+denom3
+-1
+2
+denom1
+-1
+2
+}
+# include_file {
+d:|quartus ii|quartus|libraries|megafunctions|abs_divider.inc
+cdfefd53e136b3a8e541899b82db37d
+d:|quartus ii|quartus|libraries|megafunctions|aglobal90.inc
+99832fdf63412df51d7531202d74e75
+d:|quartus ii|quartus|libraries|megafunctions|sign_div_unsign.inc
+c1e17922387cb5d0c88d7fb673544bb4
+}
+# macro_sequence
+
+# end
+# entity
+lpm_divide_qvl
+# storage
+db|exam1.(11).cnf
+db|exam1.(11).cnf
+# case_insensitive
+# source_file
+db|lpm_divide_qvl.tdf
+68e7aafedb8add165ce515a222ad9e6
+7
+# used_port {
+quotient7
+-1
+3
+quotient6
+-1
+3
+quotient5
+-1
+3
+quotient4
+-1
+3
+quotient3
+-1
+3
+quotient2
+-1
+3
+quotient1
+-1
+3
+quotient0
+-1
+3
+numer7
+-1
+3
+numer6
+-1
+3
+numer5
+-1
+3
+numer4
+-1
+3
+numer3
+-1
+3
+numer2
+-1
+3
+numer1
+-1
+3
+numer0
+-1
+3
+denom3
+-1
+3
+denom2
+-1
+3
+denom1
+-1
+3
+denom0
+-1
+3
+}
+# macro_sequence
+
+# end
+# complete
+

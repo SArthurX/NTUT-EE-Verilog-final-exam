@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="exam5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|exam5|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_veo.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|exam5|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_v6o.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
